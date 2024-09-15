@@ -1,21 +1,27 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Models\Train;
+use App\Models\travel;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function index()
+    {
+        $trains = Train::all();
+        return view('home', [
+            'trains' => $trains,
+        ]);
+    }
 
-    public function index(){
-        return view('home');
-   }
-  
-   public function about(){
-       return view('about');
-   }
+    public function page()
+    {
+        return view('page');
+        $travel = travel::all();
 
-   public function contacts(){
-       return view('contacts');
-   }
+        return view('page', [
+            'travels' => $travels,
+        ]);
+    }
 }
