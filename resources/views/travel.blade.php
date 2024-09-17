@@ -1,13 +1,15 @@
 {{-- extends view/layouts/main.blade.php --}}
 @extends('layouts.main')
+
 {{-- title yeld --}}
 @section('title')
 page2
 @endsection
+
 {{-- first yeld --}}
 @section('yeld1')
 <h1>
-    TRAINS
+    SECOND PAGE
 </h1>
 <table class="table">
     <thead>
@@ -34,7 +36,7 @@ page2
           <td>{{$pack->prezzo}}$</td>
           <td>{{$pack->descrizione}}</td>
         </tr>
-
+            
         @endforeach
     </tbody>
   </table>
